@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage":"https://sandinius.github.io/PreEntrega1Andini/",
+  "homepage": "https://sandinius.github.io/PreEntrega1Andini/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,13 +15,14 @@
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
     "react-scripts": "^5.0.1",
     "styled-components": "^6.0.8",
     "web-vitals": "^3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build", 
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
