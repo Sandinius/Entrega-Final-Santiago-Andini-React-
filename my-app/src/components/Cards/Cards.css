@@ -1,0 +1,7 @@
+.cartas{
+    display: flex;
+    gap: 28em;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 4em;
+}
