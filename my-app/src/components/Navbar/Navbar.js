@@ -2,6 +2,8 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
+import Cards from '../CardsWidget/CardsWidget';
+import "../CardsWidget/CardsWidget.css";
 
 const Navbar = (props) => {
   return (
@@ -14,8 +16,8 @@ const Navbar = (props) => {
           <Button variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {props.contacto}
           </Button>
-          <Button variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            {props.carrito}
+          <Button>
+          <Cards/>
           </Button>
         </Toolbar>
       </AppBar>
