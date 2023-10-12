@@ -1,0 +1,20 @@
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: blue;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.cartBotton{
+    background-color: white;
+    border-radius: 10%;
+}
+.botones{
+    width: 30vh;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+.botones:hover{
+    border: 1px solid black;
+}

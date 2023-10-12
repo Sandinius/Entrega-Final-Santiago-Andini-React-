@@ -1,5 +1,6 @@
 .cartas{
-    display: flex;
-    margin-top: 3em;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 1pc;
+    gap: 10px;
 }

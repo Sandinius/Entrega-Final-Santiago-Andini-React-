@@ -1,0 +1,8 @@
+.acomodar{
+    display: flex;
+    justify-content: center;
+}
+.tarjetaPersonaje{
+    margin-top: 2pc;
+    width: 27em;
+}
