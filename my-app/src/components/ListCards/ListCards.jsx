@@ -1,31 +1,35 @@
 import { useState, useEffect} from 'react';
 import Cards from '../ItemListContainer/ItemListContainer';
 import '../ItemListContainer/ItemListContainer.css';
-import axios from 'axios';
-import { Link } from '@mui/material';
+import { db } from "../../firebase/firebaseConfig"
+import { collection, query, getDocs } from 'firebase/firestore';
 
+export const ListProducts = () => {
+  
+  const [products, setProducts] = useState([]);
 
-export const ListCharacters = () => {
-  const [chars, setChars] = useState([]);
-
-  useEffect(() => {
-    axios("https://rickandmortyapi.com/api/character").then((resp) =>{
-          setChars(resp.data.results)
-        })
-      }
-  ,[]);
+  useEffect(()=>{
+    const getProducts = async () =>{
+    const q = query(collection(db,"products"));
+    const docs = [];
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc)=>{
+      docs.push({...doc.data(), id: doc.id});
+    });
+    setProducts(docs);
+  };
+  getProducts();
+  },[]);
   return (
     <div className='cartas'>
-       {chars.map((char) => {
+       {products.map((char) => {
         return (
             <div key={char.id}>
-              <Link href={`/detalles/${char.id}`}>
             <Cards char={char} />
-              </Link>
             </div>
         );
        })}
         </div>
   );
 };
-export default ListCharacters
+export default ListProducts;

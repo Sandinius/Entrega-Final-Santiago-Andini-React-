@@ -1,0 +1,33 @@
+.acomodarCarrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contenidoCarrito{
+    list-style-type: none;
+    border-bottom: solid 1px;
+    padding-bottom: 1em;
+    height: 4vh;
+    padding-top: 1em;
+}
+.botonesSacar{
+    width: 4vw;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 1em;
+}
+.botonesSacar:hover{
+    border: 1px solid black;
+}
+.botonesPagar{
+    width: 4vw;
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 1em;
+}
+.botonesPagar:hover{
+    border: 1px solid black;
+}

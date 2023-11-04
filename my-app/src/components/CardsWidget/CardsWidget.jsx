@@ -1,17 +1,25 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useState, useEffect } from 'react';
 
-const Cards = (props) => {
+const Cards = ({ carrito }) => {
+
+  const [cantidadCarrito, setCantidadCarrito] = useState(0);
+
+  useEffect(() => {
+    const totalItems = carrito.reduce((total, producto) => total + producto.cantidad, 0);
+    setCantidadCarrito(totalItems);
+  }, [carrito]);
+  
   return (
-    <botton className='cartCompra'>
+    <div className='cartCompra'>
       <h1>
         <p>
-        <ShoppingCartIcon/>
-        1
+          <ShoppingCartIcon />
+          {cantidadCarrito}
         </p>
       </h1>
-    </botton>
+    </div>
   );
 }
 
-
-export default Cards
+export default Cards;

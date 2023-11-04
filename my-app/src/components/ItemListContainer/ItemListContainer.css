@@ -4,3 +4,19 @@
     padding-top: 1pc;
     gap: 10px;
 }
+.link{
+    cursor: pointer;
+}
+.botones_items{
+    display: flex;
+    justify-content: center;
+    height: 3vh;
+    width: 15vw;
+    background-color:blueviolet;
+    color: white !important;
+    border: none;
+    text-decoration: none !important;
+}
+.botones_items:hover{
+    border: 1px solid black;
+}
